@@ -1,0 +1,15 @@
+{
+    "description": "#string",
+    "utilisateur": {"id": "#number"},
+    "etatAvancement": {"id": "#number"},
+    "tache": {"id": "#number"}
+
+}
+
+
+
+
+
+
+
+

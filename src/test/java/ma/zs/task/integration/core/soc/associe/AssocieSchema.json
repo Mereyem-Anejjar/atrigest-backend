@@ -1,0 +1,14 @@
+{
+    "nom": "#string",
+    "societe": {"id": "#number"},
+    "roleAssocie": {"id": "#number"}
+
+}
+
+
+
+
+
+
+
+

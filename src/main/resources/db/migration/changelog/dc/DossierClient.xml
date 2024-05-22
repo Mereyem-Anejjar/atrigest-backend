@@ -1,0 +1,87 @@
+<!-- db/changelog-1.1-container.xml -->
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+  <!-- Create Container Table -->
+    <changeSet id="1" author="your-name">
+    <createTable tableName="dossier_client">
+      <column name="id" type="BIGINT">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+        <column name="nom" type="VARCHAR(500)"/>
+        <column name="adresse" type="VARCHAR(500)"/>
+        <column name="numero_identite" type="VARCHAR(500)"/>
+        <column name="raison_sociale" type="VARCHAR(500)"/>
+        <column name="identifiant_commun" type="VARCHAR(500)"/>
+        <column name="registre_commerce" type="VARCHAR(500)"/>
+        <column name="taxe_professionnelle" type="VARCHAR(500)"/>
+        <column name="cnss" type="VARCHAR(500)"/>
+        <column name="groupe_societe" type="VARCHAR(500)"/>
+
+        <column name="nationalite_id" type="BIGINT">
+          <constraints nullable="false"/>
+        </column>
+        <column name="type_identite_id" type="BIGINT">
+          <constraints nullable="false"/>
+        </column>
+        <column name="banque_adherente_id" type="BIGINT">
+          <constraints nullable="false"/>
+        </column>
+
+    </createTable>
+  </changeSet>
+
+    <!-- Add foreign key constraint -->
+  <changeSet id="2" author="your-name">
+      <addForeignKeyConstraint
+              baseTableName="dossier_client"
+              baseColumnNames="nationalite_id"
+              referencedTableName="nationalite"
+              referencedColumnNames="id"
+              constraintName="fk_dossier_client_nationalite"/>
+      <addForeignKeyConstraint
+              baseTableName="dossier_client"
+              baseColumnNames="type_identite_id"
+              referencedTableName="type_identite"
+              referencedColumnNames="id"
+              constraintName="fk_dossier_client_type_identite"/>
+      <addForeignKeyConstraint
+              baseTableName="dossier_client"
+              baseColumnNames="banque_adherente_id"
+              referencedTableName="banque_adherente"
+              referencedColumnNames="id"
+              constraintName="fk_dossier_client_banque_adherente"/>
+
+  </changeSet>
+
+    <!-- Create Sequence for ContainerType -->
+  <changeSet id="3" author="your-name">
+    <createSequence sequenceName="dossier_client_seq" startValue="1" incrementBy="1"/>
+  </changeSet>
+
+  <!-- Load Data from CSV -->
+  <changeSet id="4" author="your-name">
+    <loadData
+            file="classpath:/db/migration/data/dc/DossierClient.csv"
+            tableName="dossier_client">
+      <column name="id" type="NUMERIC"/>
+          <column name="nom" type="STRING"/>
+          <column name="adresse" type="STRING"/>
+          <column name="numero_identite" type="STRING"/>
+          <column name="raison_sociale" type="STRING"/>
+          <column name="identifiant_commun" type="STRING"/>
+          <column name="registre_commerce" type="STRING"/>
+          <column name="taxe_professionnelle" type="STRING"/>
+          <column name="cnss" type="STRING"/>
+          <column name="groupe_societe" type="STRING"/>
+        <column name="nationalite" type="BIGINT"/>
+        <column name="type_identite" type="BIGINT"/>
+        <column name="banque_adherente" type="BIGINT"/>
+    </loadData>
+  </changeSet>
+
+
+</databaseChangeLog>

@@ -1,0 +1,25 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+            <include file="classpath:db/migration/changelog/notif/NotificationDetail.xml"/>
+        <include file="classpath:db/migration/changelog/task/TacheEntiteExterne.xml"/>
+        <include file="classpath:db/migration/changelog/utilisateur/Utilisateur.xml"/>
+        <include file="classpath:db/migration/changelog/commun/TypeIdentite.xml"/>
+        <include file="classpath:db/migration/changelog/entite/TypeEntiteExterne.xml"/>
+        <include file="classpath:db/migration/changelog/commun/Priorite.xml"/>
+        <include file="classpath:db/migration/changelog/dc/DossierClient.xml"/>
+        <include file="classpath:db/migration/changelog/soc/Societe.xml"/>
+        <include file="classpath:db/migration/changelog/notif/Notification.xml"/>
+        <include file="classpath:db/migration/changelog/soc/RoleAssocie.xml"/>
+        <include file="classpath:db/migration/changelog/commun/Banque.xml"/>
+        <include file="classpath:db/migration/changelog/commun/EtatAvancement.xml"/>
+        <include file="classpath:db/migration/changelog/entite/EntiteExterne.xml"/>
+        <include file="classpath:db/migration/changelog/soc/Associe.xml"/>
+        <include file="classpath:db/migration/changelog/task/TacheDetail.xml"/>
+        <include file="classpath:db/migration/changelog/soc/TypeSociete.xml"/>
+        <include file="classpath:db/migration/changelog/task/Tache.xml"/>
+        <include file="classpath:db/migration/changelog/commun/Nationalite.xml"/>
+
+</databaseChangeLog>

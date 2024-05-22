@@ -1,0 +1,15 @@
+{
+    "nom": "#string",
+    "email": "#string",
+    "tel": "#string",
+    "typeEntiteExterne": {"id": "#number"}
+
+}
+
+
+
+
+
+
+
+

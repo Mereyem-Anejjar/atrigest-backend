@@ -1,0 +1,43 @@
+{
+    "description": "#string",
+    "priorite": {"id": "#number"},
+    "etatAvancement": {"id": "#number"},
+    "dossierClient": {"id": "#number"},
+
+    "tacheDetails": [
+      {
+        "description":"#string",}
+        "utilisateur":{"id": "#number"},}
+        "etatAvancement":{"id": "#number"}}
+      },
+      {
+        "description":"#string",}
+        "utilisateur":{"id": "#number"},}
+        "etatAvancement":{"id": "#number"}}
+      },
+      {
+        "description":"#string",}
+        "utilisateur":{"id": "#number"},}
+        "etatAvancement":{"id": "#number"}}
+      }
+    ],
+    "tacheEntiteExternes": [
+      {
+        "entiteExterne":{"id": "#number"}}
+      },
+      {
+        "entiteExterne":{"id": "#number"}}
+      },
+      {
+        "entiteExterne":{"id": "#number"}}
+      }
+    ]
+}
+
+
+
+
+
+
+
+

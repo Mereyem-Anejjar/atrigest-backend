@@ -1,0 +1,43 @@
+{
+    "description": "description-1",
+    "priorite": {"id": "1"},
+    "etatAvancement": {"id": "1"},
+    "dossierClient": {"id": "1"},
+
+    "tacheDetails": [
+        {
+            "description":"description-1",
+            "utilisateur":{"id": "1"},
+            "etatAvancement":{"id": "1"}
+        },
+        {
+            "description":"description-2",
+            "utilisateur":{"id": "2"},
+            "etatAvancement":{"id": "2"}
+        },
+        {
+            "description":"description-3",
+            "utilisateur":{"id": "3"},
+            "etatAvancement":{"id": "3"}
+        }
+    ],
+    "tacheEntiteExternes": [
+        {
+            "entiteExterne":{"id": "1"}
+        },
+        {
+            "entiteExterne":{"id": "2"}
+        },
+        {
+            "entiteExterne":{"id": "3"}
+        }
+    ]
+}
+
+
+
+
+
+
+
+

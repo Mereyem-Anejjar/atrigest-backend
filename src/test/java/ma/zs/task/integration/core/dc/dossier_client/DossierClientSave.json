@@ -1,0 +1,23 @@
+{
+    "nom": "nom-1",
+    "adresse": "adresse-1",
+    "nationalite": {"id": "1"},
+    "typeIdentite": {"id": "1"},
+    "numeroIdentite": "numeroIdentite-1",
+    "raisonSociale": "raisonSociale-1",
+    "identifiantCommun": "identifiantCommun-1",
+    "registreCommerce": "registreCommerce-1",
+    "taxeProfessionnelle": "taxeProfessionnelle-1",
+    "cnss": "cnss-1",
+    "banqueAdherente": {"id": "1"},
+    "groupeSociete": "groupeSociete-1"
+
+}
+
+
+
+
+
+
+
+

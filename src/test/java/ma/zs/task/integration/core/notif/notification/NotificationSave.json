@@ -1,0 +1,23 @@
+{
+    "contenue": "contenue-1",
+
+    "notificationDetails": [
+        {
+            "utilisateur":{"id": "1"}
+        },
+        {
+            "utilisateur":{"id": "2"}
+        },
+        {
+            "utilisateur":{"id": "3"}
+        }
+    ]
+}
+
+
+
+
+
+
+
+

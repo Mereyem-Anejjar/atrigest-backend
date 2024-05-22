@@ -1,0 +1,31 @@
+{
+    "nom": "nom-1",
+    "type": {"id": "1"},
+    "rc": "rc-1",
+    "taxeProfessionnelle": "taxeProfessionnelle-1",
+    "ice": "ice-1",
+    "gerant": "gerant-1",
+
+    "associes": [
+        {
+            "nom":"nom-1",
+            "roleAssocie":{"id": "1"}
+        },
+        {
+            "nom":"nom-2",
+            "roleAssocie":{"id": "2"}
+        },
+        {
+            "nom":"nom-3",
+            "roleAssocie":{"id": "3"}
+        }
+    ]
+}
+
+
+
+
+
+
+
+

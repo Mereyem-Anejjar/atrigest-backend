@@ -1,0 +1,1428 @@
+openapi: 3.0.3
+info:
+  title: Title
+  description: Title
+  version: 1.0.0
+servers:
+  - url: 'https'
+paths:
+  /notificationDetails:
+    get:
+      summary: List all notificationDetails
+      operationId: listNotificationDetails
+      tags:
+        - notificationDetails
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of notificationDetails
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/NotificationDetails'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a notificationDetail
+      operationId: createNotificationDetails
+      tags:
+        - notificationDetails
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /notificationDetails/{notificationDetailId}:
+    get:
+      summary: Info for a specific notificationDetail
+      operationId: showNotificationDetailById
+      tags:
+        - notificationDetails
+      parameters:
+        - name: notificationDetailId
+          in: path
+          required: true
+          description: The id of the notificationDetail to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/NotificationDetails'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /tacheEntiteExternes:
+    get:
+      summary: List all tacheEntiteExternes
+      operationId: listTacheEntiteExternes
+      tags:
+        - tacheEntiteExternes
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of tacheEntiteExternes
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/TacheEntiteExternes'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a tacheEntiteExterne
+      operationId: createTacheEntiteExternes
+      tags:
+        - tacheEntiteExternes
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /tacheEntiteExternes/{tacheEntiteExterneId}:
+    get:
+      summary: Info for a specific tacheEntiteExterne
+      operationId: showTacheEntiteExterneById
+      tags:
+        - tacheEntiteExternes
+      parameters:
+        - name: tacheEntiteExterneId
+          in: path
+          required: true
+          description: The id of the tacheEntiteExterne to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/TacheEntiteExternes'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /utilisateurs:
+    get:
+      summary: List all utilisateurs
+      operationId: listUtilisateurs
+      tags:
+        - utilisateurs
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of utilisateurs
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Utilisateurs'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a utilisateur
+      operationId: createUtilisateurs
+      tags:
+        - utilisateurs
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /utilisateurs/{utilisateurId}:
+    get:
+      summary: Info for a specific utilisateur
+      operationId: showUtilisateurById
+      tags:
+        - utilisateurs
+      parameters:
+        - name: utilisateurId
+          in: path
+          required: true
+          description: The id of the utilisateur to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Utilisateurs'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /typeIdentites:
+    get:
+      summary: List all typeIdentites
+      operationId: listTypeIdentites
+      tags:
+        - typeIdentites
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of typeIdentites
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/TypeIdentites'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a typeIdentite
+      operationId: createTypeIdentites
+      tags:
+        - typeIdentites
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /typeIdentites/{typeIdentiteId}:
+    get:
+      summary: Info for a specific typeIdentite
+      operationId: showTypeIdentiteById
+      tags:
+        - typeIdentites
+      parameters:
+        - name: typeIdentiteId
+          in: path
+          required: true
+          description: The id of the typeIdentite to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/TypeIdentites'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /typeEntiteExternes:
+    get:
+      summary: List all typeEntiteExternes
+      operationId: listTypeEntiteExternes
+      tags:
+        - typeEntiteExternes
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of typeEntiteExternes
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/TypeEntiteExternes'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a typeEntiteExterne
+      operationId: createTypeEntiteExternes
+      tags:
+        - typeEntiteExternes
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /typeEntiteExternes/{typeEntiteExterneId}:
+    get:
+      summary: Info for a specific typeEntiteExterne
+      operationId: showTypeEntiteExterneById
+      tags:
+        - typeEntiteExternes
+      parameters:
+        - name: typeEntiteExterneId
+          in: path
+          required: true
+          description: The id of the typeEntiteExterne to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/TypeEntiteExternes'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /priorites:
+    get:
+      summary: List all priorites
+      operationId: listPriorites
+      tags:
+        - priorites
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of priorites
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Priorites'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a priorite
+      operationId: createPriorites
+      tags:
+        - priorites
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /priorites/{prioriteId}:
+    get:
+      summary: Info for a specific priorite
+      operationId: showPrioriteById
+      tags:
+        - priorites
+      parameters:
+        - name: prioriteId
+          in: path
+          required: true
+          description: The id of the priorite to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Priorites'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /dossierClients:
+    get:
+      summary: List all dossierClients
+      operationId: listDossierClients
+      tags:
+        - dossierClients
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of dossierClients
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/DossierClients'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a dossierClient
+      operationId: createDossierClients
+      tags:
+        - dossierClients
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /dossierClients/{dossierClientId}:
+    get:
+      summary: Info for a specific dossierClient
+      operationId: showDossierClientById
+      tags:
+        - dossierClients
+      parameters:
+        - name: dossierClientId
+          in: path
+          required: true
+          description: The id of the dossierClient to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/DossierClients'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /societes:
+    get:
+      summary: List all societes
+      operationId: listSocietes
+      tags:
+        - societes
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of societes
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Societes'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a societe
+      operationId: createSocietes
+      tags:
+        - societes
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /societes/{societeId}:
+    get:
+      summary: Info for a specific societe
+      operationId: showSocieteById
+      tags:
+        - societes
+      parameters:
+        - name: societeId
+          in: path
+          required: true
+          description: The id of the societe to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Societes'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /notifications:
+    get:
+      summary: List all notifications
+      operationId: listNotifications
+      tags:
+        - notifications
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of notifications
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Notifications'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a notification
+      operationId: createNotifications
+      tags:
+        - notifications
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /notifications/{notificationId}:
+    get:
+      summary: Info for a specific notification
+      operationId: showNotificationById
+      tags:
+        - notifications
+      parameters:
+        - name: notificationId
+          in: path
+          required: true
+          description: The id of the notification to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Notifications'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /roleAssocies:
+    get:
+      summary: List all roleAssocies
+      operationId: listRoleAssocies
+      tags:
+        - roleAssocies
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of roleAssocies
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/RoleAssocies'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a roleAssocie
+      operationId: createRoleAssocies
+      tags:
+        - roleAssocies
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /roleAssocies/{roleAssocieId}:
+    get:
+      summary: Info for a specific roleAssocie
+      operationId: showRoleAssocieById
+      tags:
+        - roleAssocies
+      parameters:
+        - name: roleAssocieId
+          in: path
+          required: true
+          description: The id of the roleAssocie to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/RoleAssocies'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /banques:
+    get:
+      summary: List all banques
+      operationId: listBanques
+      tags:
+        - banques
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of banques
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Banques'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a banque
+      operationId: createBanques
+      tags:
+        - banques
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /banques/{banqueId}:
+    get:
+      summary: Info for a specific banque
+      operationId: showBanqueById
+      tags:
+        - banques
+      parameters:
+        - name: banqueId
+          in: path
+          required: true
+          description: The id of the banque to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Banques'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /etatAvancements:
+    get:
+      summary: List all etatAvancements
+      operationId: listEtatAvancements
+      tags:
+        - etatAvancements
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of etatAvancements
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/EtatAvancements'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a etatAvancement
+      operationId: createEtatAvancements
+      tags:
+        - etatAvancements
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /etatAvancements/{etatAvancementId}:
+    get:
+      summary: Info for a specific etatAvancement
+      operationId: showEtatAvancementById
+      tags:
+        - etatAvancements
+      parameters:
+        - name: etatAvancementId
+          in: path
+          required: true
+          description: The id of the etatAvancement to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/EtatAvancements'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /entiteExternes:
+    get:
+      summary: List all entiteExternes
+      operationId: listEntiteExternes
+      tags:
+        - entiteExternes
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of entiteExternes
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/EntiteExternes'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a entiteExterne
+      operationId: createEntiteExternes
+      tags:
+        - entiteExternes
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /entiteExternes/{entiteExterneId}:
+    get:
+      summary: Info for a specific entiteExterne
+      operationId: showEntiteExterneById
+      tags:
+        - entiteExternes
+      parameters:
+        - name: entiteExterneId
+          in: path
+          required: true
+          description: The id of the entiteExterne to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/EntiteExternes'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /associes:
+    get:
+      summary: List all associes
+      operationId: listAssocies
+      tags:
+        - associes
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of associes
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Associes'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a associe
+      operationId: createAssocies
+      tags:
+        - associes
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /associes/{associeId}:
+    get:
+      summary: Info for a specific associe
+      operationId: showAssocieById
+      tags:
+        - associes
+      parameters:
+        - name: associeId
+          in: path
+          required: true
+          description: The id of the associe to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Associes'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /tacheDetails:
+    get:
+      summary: List all tacheDetails
+      operationId: listTacheDetails
+      tags:
+        - tacheDetails
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of tacheDetails
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/TacheDetails'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a tacheDetail
+      operationId: createTacheDetails
+      tags:
+        - tacheDetails
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /tacheDetails/{tacheDetailId}:
+    get:
+      summary: Info for a specific tacheDetail
+      operationId: showTacheDetailById
+      tags:
+        - tacheDetails
+      parameters:
+        - name: tacheDetailId
+          in: path
+          required: true
+          description: The id of the tacheDetail to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/TacheDetails'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /typeSocietes:
+    get:
+      summary: List all typeSocietes
+      operationId: listTypeSocietes
+      tags:
+        - typeSocietes
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of typeSocietes
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/TypeSocietes'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a typeSociete
+      operationId: createTypeSocietes
+      tags:
+        - typeSocietes
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /typeSocietes/{typeSocieteId}:
+    get:
+      summary: Info for a specific typeSociete
+      operationId: showTypeSocieteById
+      tags:
+        - typeSocietes
+      parameters:
+        - name: typeSocieteId
+          in: path
+          required: true
+          description: The id of the typeSociete to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/TypeSocietes'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /taches:
+    get:
+      summary: List all taches
+      operationId: listTaches
+      tags:
+        - taches
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of taches
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Taches'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a tache
+      operationId: createTaches
+      tags:
+        - taches
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /taches/{tacheId}:
+    get:
+      summary: Info for a specific tache
+      operationId: showTacheById
+      tags:
+        - taches
+      parameters:
+        - name: tacheId
+          in: path
+          required: true
+          description: The id of the tache to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Taches'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /nationalites:
+    get:
+      summary: List all nationalites
+      operationId: listNationalites
+      tags:
+        - nationalites
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of nationalites
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Nationalites'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a nationalite
+      operationId: createNationalites
+      tags:
+        - nationalites
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /nationalites/{nationaliteId}:
+    get:
+      summary: Info for a specific nationalite
+      operationId: showNationaliteById
+      tags:
+        - nationalites
+      parameters:
+        - name: nationaliteId
+          in: path
+          required: true
+          description: The id of the nationalite to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Nationalites'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  
+
+
+definitions:
+  NotificationDetail:
+    type: "object"
+    required:
+      - id
+    properties:
+      id:
+        type: int
+  NotificationDetails:
+    type: array
+    items:
+      $ref: '#/definitions/NotificationDetail'
+  TacheEntiteExterne:
+    type: "object"
+    required:
+      - id
+    properties:
+      id:
+        type: int
+  TacheEntiteExternes:
+    type: array
+    items:
+      $ref: '#/definitions/TacheEntiteExterne'
+  Utilisateur:
+    type: "object"
+    required:
+      - id
+      - description
+      - credentialsNonExpired
+      - enabled
+      - accountNonExpired
+      - accountNonLocked
+      - passwordChanged
+      - username
+      - password
+    properties:
+      id:
+        type: int
+      description:
+        type: string
+      credentialsNonExpired:
+        type: boolean
+      enabled:
+        type: boolean
+      accountNonExpired:
+        type: boolean
+      accountNonLocked:
+        type: boolean
+      passwordChanged:
+        type: boolean
+      username:
+        type: string
+      password:
+        type: string
+  Utilisateurs:
+    type: array
+    items:
+      $ref: '#/definitions/Utilisateur'
+  TypeIdentite:
+    type: "object"
+    required:
+      - id
+      - code
+      - libelle
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      libelle:
+        type: string
+  TypeIdentites:
+    type: array
+    items:
+      $ref: '#/definitions/TypeIdentite'
+  TypeEntiteExterne:
+    type: "object"
+    required:
+      - id
+      - code
+      - libelle
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      libelle:
+        type: string
+  TypeEntiteExternes:
+    type: array
+    items:
+      $ref: '#/definitions/TypeEntiteExterne'
+  Priorite:
+    type: "object"
+    required:
+      - id
+      - code
+      - libelle
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      libelle:
+        type: string
+  Priorites:
+    type: array
+    items:
+      $ref: '#/definitions/Priorite'
+  DossierClient:
+    type: "object"
+    required:
+      - id
+      - nom
+      - adresse
+      - numeroIdentite
+      - raisonSociale
+      - identifiantCommun
+      - registreCommerce
+      - taxeProfessionnelle
+      - cnss
+      - groupeSociete
+    properties:
+      id:
+        type: int
+      nom:
+        type: string
+      adresse:
+        type: string
+      numeroIdentite:
+        type: string
+      raisonSociale:
+        type: string
+      identifiantCommun:
+        type: string
+      registreCommerce:
+        type: string
+      taxeProfessionnelle:
+        type: string
+      cnss:
+        type: string
+      groupeSociete:
+        type: string
+  DossierClients:
+    type: array
+    items:
+      $ref: '#/definitions/DossierClient'
+  Societe:
+    type: "object"
+    required:
+      - id
+      - nom
+      - dateCreation
+      - rc
+      - taxeProfessionnelle
+      - ice
+      - gerant
+    properties:
+      id:
+        type: int
+      nom:
+        type: string
+      dateCreation:
+        type: date
+      rc:
+        type: string
+      taxeProfessionnelle:
+        type: string
+      ice:
+        type: string
+      gerant:
+        type: string
+  Societes:
+    type: array
+    items:
+      $ref: '#/definitions/Societe'
+  Notification:
+    type: "object"
+    required:
+      - id
+      - contenue
+      - dateEnvoi
+    properties:
+      id:
+        type: int
+      contenue:
+        type: string
+      dateEnvoi:
+        type: date
+  Notifications:
+    type: array
+    items:
+      $ref: '#/definitions/Notification'
+  RoleAssocie:
+    type: "object"
+    required:
+      - id
+      - code
+      - libelle
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      libelle:
+        type: string
+  RoleAssocies:
+    type: array
+    items:
+      $ref: '#/definitions/RoleAssocie'
+  Banque:
+    type: "object"
+    required:
+      - id
+      - code
+      - libelle
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      libelle:
+        type: string
+  Banques:
+    type: array
+    items:
+      $ref: '#/definitions/Banque'
+  EtatAvancement:
+    type: "object"
+    required:
+      - id
+      - code
+      - libelle
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      libelle:
+        type: string
+  EtatAvancements:
+    type: array
+    items:
+      $ref: '#/definitions/EtatAvancement'
+  EntiteExterne:
+    type: "object"
+    required:
+      - id
+      - nom
+      - email
+      - tel
+    properties:
+      id:
+        type: int
+      nom:
+        type: string
+      email:
+        type: string
+      tel:
+        type: string
+  EntiteExternes:
+    type: array
+    items:
+      $ref: '#/definitions/EntiteExterne'
+  Associe:
+    type: "object"
+    required:
+      - id
+      - nom
+    properties:
+      id:
+        type: int
+      nom:
+        type: string
+  Associes:
+    type: array
+    items:
+      $ref: '#/definitions/Associe'
+  TacheDetail:
+    type: "object"
+    required:
+      - id
+      - description
+    properties:
+      id:
+        type: int
+      description:
+        type: string
+  TacheDetails:
+    type: array
+    items:
+      $ref: '#/definitions/TacheDetail'
+  TypeSociete:
+    type: "object"
+    required:
+      - id
+      - code
+      - libelle
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      libelle:
+        type: string
+  TypeSocietes:
+    type: array
+    items:
+      $ref: '#/definitions/TypeSociete'
+  Tache:
+    type: "object"
+    required:
+      - id
+      - description
+      - dateLimite
+    properties:
+      id:
+        type: int
+      description:
+        type: string
+      dateLimite:
+        type: date
+  Taches:
+    type: array
+    items:
+      $ref: '#/definitions/Tache'
+  Nationalite:
+    type: "object"
+    required:
+      - id
+      - code
+      - libelle
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      libelle:
+        type: string
+  Nationalites:
+    type: array
+    items:
+      $ref: '#/definitions/Nationalite'
+
+  Error:
+    type: "object"
+    required:
+      - code
+      - message
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string
